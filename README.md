@@ -26,14 +26,16 @@ func main() {
 
 	// Given the PUT calls above, prints: "The amount of data is N = 5/1".
 	//
-	// Note that statisticalAccumulator.N() returns a big.Rat,
+	// Note that statisticalAccumulator.N() returns a *big.Rat,
 	// thus why the outputted value is "5/1" and not just "5".
+	// (By default, big.Rat string serialization is as a fraction.)
 	fmt.Printf("The amount of data is N = %v\n", statisticalAccumulator.N())
 
 	// Given the PUT calls above, prints: "The mean is 18/1".
 	//
-	// Note that statisticalAccumulator.Mean() returns a big.Rat,
+	// Note that statisticalAccumulator.Mean() returns a *big.Rat,
 	// thus why the outputted value is "18/1" and not just "18".
+	// (By default, big.Rat string serialization is as a fraction.)
 	fmt.Printf("The mean is %v\n", statisticalAccumulator.Mean())
 
 	// Given the PUT calls above, prints: "The variance is 4/5".
