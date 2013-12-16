@@ -101,7 +101,7 @@ func TestRunningAccumulation(t *testing.T) {
 
 	for testSetNumber,tests := range testsOfTests {
 
-		statisticalAccumulator := NewStatisticalAccumulator()
+		statisticalAccumulator := New()
 
 		for datumNumber,datum := range tests {
 
