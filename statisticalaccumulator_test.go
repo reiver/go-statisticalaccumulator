@@ -10,10 +10,6 @@ import (
 
 func TestRunningAccumulation(t *testing.T) {
 
-//	tests := []struct {
-
-
-
 	testsOfTests := [][]struct {
 			x                string
 			expectedN        string
