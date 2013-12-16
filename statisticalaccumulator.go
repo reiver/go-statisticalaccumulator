@@ -16,7 +16,7 @@ type StatisticalAccumulator struct {
 
 
 
-func NewStatisticalAccumulator() (*StatisticalAccumulator) {
+func New() (*StatisticalAccumulator) {
 
 	n := new(big.Rat)
 	n.SetInt64(0)
