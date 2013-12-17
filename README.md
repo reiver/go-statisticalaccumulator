@@ -18,6 +18,8 @@ func main() {
 
 	statisticalAccumulator := statisticalaccumulator.New()
 
+
+
 	// Put some integers, as strings.
 	statisticalAccumulator.PutString("17")
 	statisticalAccumulator.PutString("19")
@@ -54,9 +56,12 @@ func main() {
 	statisticalAccumulator.PutRat(br)
 
 
+
+	// Get N, the mean and the variance.
 	n        := statisticalAccumulator.N()
 	mean     := statisticalAccumulator.Mean()
 	variance := statisticalAccumulator.Variance()
+
 
 
 	// Given the PUT calls above, prints: "The amount of data is N = 5/1".
