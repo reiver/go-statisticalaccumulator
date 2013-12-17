@@ -17,11 +17,29 @@ func main() {
 
 	statisticalAccumulator := statisticalaccumulator.New()
 
+	// Add some integers, as strings.
 	statisticalAccumulator.PutString("17")
 	statisticalAccumulator.PutString("19")
 	statisticalAccumulator.PutString("18")
 	statisticalAccumulator.PutString("17")
 	statisticalAccumulator.PutString("19")
+	statisticalAccumulator.PutString("-12")
+	statisticalAccumulator.PutString("0")
+
+	// Add some numbers, as string, that aren't integers, but instead have decimal points
+	statisticalAccumulator.PutString("3.14159265358979323846264338327950")
+	statisticalAccumulator.PutString("18725.2200440088")
+	statisticalAccumulator.PutString("-321.0123")
+
+	// Add some numbers, as string, that aren't integers, but are fractions.
+	statisticalAccumulator.PutString("1/3")
+	statisticalAccumulator.PutString("22/7")
+	statisticalAccumulator.PutString("-7/11")
+
+	// Add some numbers that are in (an efficient) binary (format as an) int64.
+	statisticalAccumulator.PutInt64(1234567)
+	statisticalAccumulator.PutInt64(0)
+	statisticalAccumulator.PutInt64(-2)
 
 
 	n        := statisticalAccumulator.N()
