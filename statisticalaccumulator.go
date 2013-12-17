@@ -46,32 +46,6 @@ func New() (*StatisticalAccumulator) {
 
 
 
-func (me *StatisticalAccumulator) PutString(x string) {
-
-	xx := new(big.Rat)
-	xx.SetString(x)
-
-	me.PutRat(xx)
-}
-
-func (me *StatisticalAccumulator) PutRat(x *big.Rat) {
-
-	me.n.Add(me.n, me.one)
-
-
-
-	me.sigmaXI.Add(me.sigmaXI, x)
-
-
-
-	xSquared := new(big.Rat)
-	xSquared.Mul(x, x)
-	
-	me.sigmaXISquared.Add(me.sigmaXISquared, xSquared)
-}
-
-
-
 func (me *StatisticalAccumulator) N() (*big.Rat) {
 	n := new(big.Rat)
 	n.Set(me.n)
